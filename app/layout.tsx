@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { HeadersFont, BodyFonts } from "../utils/customFonts";
 import Header from "@/components/Header";
+import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,11 +15,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${HeadersFont.variable} ${BodyFonts.className}`}>
-        <Header />
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={`${HeadersFont.variable} ${BodyFonts.className}`}>
+          <Header />
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

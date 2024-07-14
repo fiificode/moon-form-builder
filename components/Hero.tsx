@@ -62,7 +62,7 @@ export default function HeroSection() {
             Create amazing forms in seconds with just a single click. Moon AI
             makes creating forms as easy in 3 steps.
           </p>
-          <div className="mt-4 sm:mt-6 w-full">
+          <div className="mt-4 sm:mt-6 w-full font-bold">
             <Button className="w-1/2 lg:w-[30%]">
               <Sparkles className="mr-2 h-4 w-4 text-lime-300" />
               Create AI Form
